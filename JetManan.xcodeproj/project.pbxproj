@@ -18,6 +18,8 @@
 		9B6C97D024922BBD0088EE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C97CE24922BBD0088EE6F /* LaunchScreen.storyboard */; };
 		9B6C97DB24922BBD0088EE6F /* JetMananTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97DA24922BBD0088EE6F /* JetMananTests.swift */; };
 		9B6C97E624922BBD0088EE6F /* JetMananUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97E524922BBD0088EE6F /* JetMananUITests.swift */; };
+		9B6C97FE249252FC0088EE6F /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97FC249252FC0088EE6F /* ArticleDetailCell.swift */; };
+		9B6C97FF249252FC0088EE6F /* ArticleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C97FD249252FC0088EE6F /* ArticleDetailCell.xib */; };
 		BBBF5B394CA68A6A82300AC0 /* Pods_JetManan_JetMananUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273C6303490EA356BAA3D640 /* Pods_JetManan_JetMananUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		9B6C97E124922BBD0088EE6F /* JetMananUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetMananUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C97E524922BBD0088EE6F /* JetMananUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetMananUITests.swift; sourceTree = "<group>"; };
 		9B6C97E724922BBD0088EE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B6C97FC249252FC0088EE6F /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
+		9B6C97FD249252FC0088EE6F /* ArticleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailCell.xib; sourceTree = "<group>"; };
 		B08785F57F78D45808E8AE79 /* Pods-JetManan-JetMananUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan-JetMananUITests.release.xcconfig"; path = "Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.debug.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.release.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +122,9 @@
 		9B6C97BF24922BBA0088EE6F /* JetManan */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C97F5249251310088EE6F /* ViewModels */,
+				9B6C97F4249251270088EE6F /* Views */,
+				9B6C97F32492511C0088EE6F /* Models */,
 				9B6C97C024922BBA0088EE6F /* AppDelegate.swift */,
 				9B6C97C224922BBA0088EE6F /* SceneDelegate.swift */,
 				9B6C97C424922BBA0088EE6F /* ViewController.swift */,
@@ -148,6 +155,29 @@
 			path = JetMananUITests;
 			sourceTree = "<group>";
 		};
+		9B6C97F32492511C0088EE6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B6C97F4249251270088EE6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C97FC249252FC0088EE6F /* ArticleDetailCell.swift */,
+				9B6C97FD249252FC0088EE6F /* ArticleDetailCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B6C97F5249251310088EE6F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F0BA51F6A422AFCB71E1767F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +188,6 @@
 				BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */,
 				D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -280,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6C97D024922BBD0088EE6F /* LaunchScreen.storyboard in Resources */,
+				9B6C97FF249252FC0088EE6F /* ArticleDetailCell.xib in Resources */,
 				9B6C97CD24922BBD0088EE6F /* Assets.xcassets in Resources */,
 				9B6C97C824922BBA0088EE6F /* Main.storyboard in Resources */,
 			);
@@ -378,6 +408,7 @@
 				9B6C97C524922BBA0088EE6F /* ViewController.swift in Sources */,
 				9B6C97C124922BBA0088EE6F /* AppDelegate.swift in Sources */,
 				9B6C97C324922BBA0088EE6F /* SceneDelegate.swift in Sources */,
+				9B6C97FE249252FC0088EE6F /* ArticleDetailCell.swift in Sources */,
 				9B6C97CB24922BBA0088EE6F /* JetManan.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
