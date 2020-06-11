@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EF16261FF542AB1DE26A572 /* Pods_JetManan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67714613788164CA65A93B85 /* Pods_JetManan.framework */; };
+		843FF7A9A8659CCFD8872BBD /* Pods_JetMananTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028B6E2DB99D2231E828D320 /* Pods_JetMananTests.framework */; };
 		9B6C97C124922BBA0088EE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C024922BBA0088EE6F /* AppDelegate.swift */; };
 		9B6C97C324922BBA0088EE6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C224922BBA0088EE6F /* SceneDelegate.swift */; };
 		9B6C97C524922BBA0088EE6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C424922BBA0088EE6F /* ViewController.swift */; };
@@ -16,6 +18,7 @@
 		9B6C97D024922BBD0088EE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C97CE24922BBD0088EE6F /* LaunchScreen.storyboard */; };
 		9B6C97DB24922BBD0088EE6F /* JetMananTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97DA24922BBD0088EE6F /* JetMananTests.swift */; };
 		9B6C97E624922BBD0088EE6F /* JetMananUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97E524922BBD0088EE6F /* JetMananUITests.swift */; };
+		BBBF5B394CA68A6A82300AC0 /* Pods_JetManan_JetMananUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273C6303490EA356BAA3D640 /* Pods_JetManan_JetMananUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		028B6E2DB99D2231E828D320 /* Pods_JetMananTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetMananTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		273C6303490EA356BAA3D640 /* Pods_JetManan_JetMananUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetManan_JetMananUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48D11D1F131A27E3DE3A99F0 /* Pods-JetManan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan.release.xcconfig"; path = "Target Support Files/Pods-JetManan/Pods-JetManan.release.xcconfig"; sourceTree = "<group>"; };
+		4F09F7BD9577CABC096D8FF6 /* Pods-JetManan-JetMananUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan-JetMananUITests.debug.xcconfig"; path = "Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		67714613788164CA65A93B85 /* Pods_JetManan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetManan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78B27DFE813C2776FDFA771C /* Pods-JetManan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan.debug.xcconfig"; path = "Target Support Files/Pods-JetManan/Pods-JetManan.debug.xcconfig"; sourceTree = "<group>"; };
 		9B6C97BD24922BBA0088EE6F /* JetManan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetManan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C97C024922BBA0088EE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6C97C224922BBA0088EE6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,9 @@
 		9B6C97E124922BBD0088EE6F /* JetMananUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JetMananUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C97E524922BBD0088EE6F /* JetMananUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JetMananUITests.swift; sourceTree = "<group>"; };
 		9B6C97E724922BBD0088EE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B08785F57F78D45808E8AE79 /* Pods-JetManan-JetMananUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan-JetMananUITests.release.xcconfig"; path = "Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.debug.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.release.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF16261FF542AB1DE26A572 /* Pods_JetManan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FF7A9A8659CCFD8872BBD /* Pods_JetMananTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBF5B394CA68A6A82300AC0 /* Pods_JetManan_JetMananUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				9B6C97D924922BBD0088EE6F /* JetMananTests */,
 				9B6C97E424922BBD0088EE6F /* JetMananUITests */,
 				9B6C97BE24922BBA0088EE6F /* Products */,
+				F0BA51F6A422AFCB71E1767F /* Pods */,
+				F51A9F8EC6AC182033351F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +148,30 @@
 			path = JetMananUITests;
 			sourceTree = "<group>";
 		};
+		F0BA51F6A422AFCB71E1767F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78B27DFE813C2776FDFA771C /* Pods-JetManan.debug.xcconfig */,
+				48D11D1F131A27E3DE3A99F0 /* Pods-JetManan.release.xcconfig */,
+				4F09F7BD9577CABC096D8FF6 /* Pods-JetManan-JetMananUITests.debug.xcconfig */,
+				B08785F57F78D45808E8AE79 /* Pods-JetManan-JetMananUITests.release.xcconfig */,
+				BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */,
+				D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F51A9F8EC6AC182033351F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67714613788164CA65A93B85 /* Pods_JetManan.framework */,
+				273C6303490EA356BAA3D640 /* Pods_JetManan_JetMananUITests.framework */,
+				028B6E2DB99D2231E828D320 /* Pods_JetMananTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B6C97EA24922BBD0088EE6F /* Build configuration list for PBXNativeTarget "JetManan" */;
 			buildPhases = (
+				9D45DDEA4DAE8FBD49FCB9B5 /* [CP] Check Pods Manifest.lock */,
 				9B6C97B924922BBA0088EE6F /* Sources */,
 				9B6C97BA24922BBA0088EE6F /* Frameworks */,
 				9B6C97BB24922BBA0088EE6F /* Resources */,
@@ -155,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B6C97ED24922BBD0088EE6F /* Build configuration list for PBXNativeTarget "JetMananTests" */;
 			buildPhases = (
+				5FE17950CF29230813CCFE17 /* [CP] Check Pods Manifest.lock */,
 				9B6C97D224922BBD0088EE6F /* Sources */,
 				9B6C97D324922BBD0088EE6F /* Frameworks */,
 				9B6C97D424922BBD0088EE6F /* Resources */,
@@ -173,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B6C97F024922BBD0088EE6F /* Build configuration list for PBXNativeTarget "JetMananUITests" */;
 			buildPhases = (
+				5A383928C679C163BA46A3BD /* [CP] Check Pods Manifest.lock */,
 				9B6C97DD24922BBD0088EE6F /* Sources */,
 				9B6C97DE24922BBD0088EE6F /* Frameworks */,
 				9B6C97DF24922BBD0088EE6F /* Resources */,
@@ -256,6 +300,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A383928C679C163BA46A3BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JetManan-JetMananUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FE17950CF29230813CCFE17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JetMananTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D45DDEA4DAE8FBD49FCB9B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JetManan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B6C97B924922BBA0088EE6F /* Sources */ = {
@@ -436,6 +549,7 @@
 		};
 		9B6C97EB24922BBD0088EE6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78B27DFE813C2776FDFA771C /* Pods-JetManan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +567,7 @@
 		};
 		9B6C97EC24922BBD0088EE6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D11D1F131A27E3DE3A99F0 /* Pods-JetManan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +585,7 @@
 		};
 		9B6C97EE24922BBD0088EE6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +607,7 @@
 		};
 		9B6C97EF24922BBD0088EE6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +629,7 @@
 		};
 		9B6C97F124922BBD0088EE6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F09F7BD9577CABC096D8FF6 /* Pods-JetManan-JetMananUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +649,7 @@
 		};
 		9B6C97F224922BBD0088EE6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B08785F57F78D45808E8AE79 /* Pods-JetManan-JetMananUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
