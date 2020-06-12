@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		843FF7A9A8659CCFD8872BBD /* Pods_JetMananTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028B6E2DB99D2231E828D320 /* Pods_JetMananTests.framework */; };
 		9B6C97C124922BBA0088EE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C024922BBA0088EE6F /* AppDelegate.swift */; };
 		9B6C97C324922BBA0088EE6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C224922BBA0088EE6F /* SceneDelegate.swift */; };
-		9B6C97C524922BBA0088EE6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C424922BBA0088EE6F /* ViewController.swift */; };
 		9B6C97C824922BBA0088EE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C97C624922BBA0088EE6F /* Main.storyboard */; };
 		9B6C97CB24922BBA0088EE6F /* JetManan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97C924922BBA0088EE6F /* JetManan.xcdatamodeld */; };
 		9B6C97CD24922BBD0088EE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C97CC24922BBD0088EE6F /* Assets.xcassets */; };
@@ -20,6 +19,13 @@
 		9B6C97E624922BBD0088EE6F /* JetMananUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97E524922BBD0088EE6F /* JetMananUITests.swift */; };
 		9B6C97FE249252FC0088EE6F /* ArticleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C97FC249252FC0088EE6F /* ArticleDetailCell.swift */; };
 		9B6C97FF249252FC0088EE6F /* ArticleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6C97FD249252FC0088EE6F /* ArticleDetailCell.xib */; };
+		9B6C980224925C700088EE6F /* ArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C980124925C700088EE6F /* ArticleVC.swift */; };
+		9B6C980E2493350A0088EE6F /* ArticleDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C980D2493350A0088EE6F /* ArticleDetailModel.swift */; };
+		9B6C981224933FFC0088EE6F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C981124933FFC0088EE6F /* NetworkManager.swift */; };
+		9B6C9814249340120088EE6F /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9813249340120088EE6F /* APIData.swift */; };
+		9B6C9816249340260088EE6F /* URLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9815249340260088EE6F /* URLData.swift */; };
+		9B6C9818249340380088EE6F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C9817249340380088EE6F /* ImageLoader.swift */; };
+		9B6C981A2493429C0088EE6F /* ArticleVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C98192493429C0088EE6F /* ArticleVIewModel.swift */; };
 		BBBF5B394CA68A6A82300AC0 /* Pods_JetManan_JetMananUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273C6303490EA356BAA3D640 /* Pods_JetManan_JetMananUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +56,6 @@
 		9B6C97BD24922BBA0088EE6F /* JetManan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetManan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6C97C024922BBA0088EE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6C97C224922BBA0088EE6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B6C97C424922BBA0088EE6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B6C97C724922BBA0088EE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B6C97CA24922BBA0088EE6F /* JetManan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JetManan.xcdatamodel; sourceTree = "<group>"; };
 		9B6C97CC24922BBD0088EE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +69,13 @@
 		9B6C97E724922BBD0088EE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B6C97FC249252FC0088EE6F /* ArticleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCell.swift; sourceTree = "<group>"; };
 		9B6C97FD249252FC0088EE6F /* ArticleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDetailCell.xib; sourceTree = "<group>"; };
+		9B6C980124925C700088EE6F /* ArticleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVC.swift; sourceTree = "<group>"; };
+		9B6C980D2493350A0088EE6F /* ArticleDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailModel.swift; sourceTree = "<group>"; };
+		9B6C981124933FFC0088EE6F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9B6C9813249340120088EE6F /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
+		9B6C9815249340260088EE6F /* URLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLData.swift; sourceTree = "<group>"; };
+		9B6C9817249340380088EE6F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		9B6C98192493429C0088EE6F /* ArticleVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVIewModel.swift; sourceTree = "<group>"; };
 		B08785F57F78D45808E8AE79 /* Pods-JetManan-JetMananUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan-JetMananUITests.release.xcconfig"; path = "Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.debug.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.release.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,12 +134,13 @@
 		9B6C97BF24922BBA0088EE6F /* JetManan */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C980324928D100088EE6F /* Network */,
+				9B6C980024925C4D0088EE6F /* ViewControllers */,
 				9B6C97F5249251310088EE6F /* ViewModels */,
 				9B6C97F4249251270088EE6F /* Views */,
 				9B6C97F32492511C0088EE6F /* Models */,
 				9B6C97C024922BBA0088EE6F /* AppDelegate.swift */,
 				9B6C97C224922BBA0088EE6F /* SceneDelegate.swift */,
-				9B6C97C424922BBA0088EE6F /* ViewController.swift */,
 				9B6C97C624922BBA0088EE6F /* Main.storyboard */,
 				9B6C97CC24922BBD0088EE6F /* Assets.xcassets */,
 				9B6C97CE24922BBD0088EE6F /* LaunchScreen.storyboard */,
@@ -158,6 +171,7 @@
 		9B6C97F32492511C0088EE6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C980C24928F820088EE6F /* Data Model */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,8 +188,36 @@
 		9B6C97F5249251310088EE6F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9B6C98192493429C0088EE6F /* ArticleVIewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9B6C980024925C4D0088EE6F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C980124925C700088EE6F /* ArticleVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9B6C980324928D100088EE6F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C981124933FFC0088EE6F /* NetworkManager.swift */,
+				9B6C9813249340120088EE6F /* APIData.swift */,
+				9B6C9815249340260088EE6F /* URLData.swift */,
+				9B6C9817249340380088EE6F /* ImageLoader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9B6C980C24928F820088EE6F /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B6C980D2493350A0088EE6F /* ArticleDetailModel.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		F0BA51F6A422AFCB71E1767F /* Pods */ = {
@@ -212,6 +254,7 @@
 				9B6C97B924922BBA0088EE6F /* Sources */,
 				9B6C97BA24922BBA0088EE6F /* Frameworks */,
 				9B6C97BB24922BBA0088EE6F /* Resources */,
+				CE2AAE786EC8A327903907C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +292,7 @@
 				9B6C97DD24922BBD0088EE6F /* Sources */,
 				9B6C97DE24922BBD0088EE6F /* Frameworks */,
 				9B6C97DF24922BBD0088EE6F /* Resources */,
+				55CBB2AA55B68E1195425A83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,6 +376,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		55CBB2AA55B68E1195425A83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A383928C679C163BA46A3BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +459,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CE2AAE786EC8A327903907C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JetManan/Pods-JetManan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JetManan/Pods-JetManan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JetManan/Pods-JetManan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -405,11 +483,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6C97C524922BBA0088EE6F /* ViewController.swift in Sources */,
+				9B6C980224925C700088EE6F /* ArticleVC.swift in Sources */,
+				9B6C980E2493350A0088EE6F /* ArticleDetailModel.swift in Sources */,
+				9B6C9814249340120088EE6F /* APIData.swift in Sources */,
 				9B6C97C124922BBA0088EE6F /* AppDelegate.swift in Sources */,
+				9B6C981A2493429C0088EE6F /* ArticleVIewModel.swift in Sources */,
+				9B6C9818249340380088EE6F /* ImageLoader.swift in Sources */,
+				9B6C981224933FFC0088EE6F /* NetworkManager.swift in Sources */,
 				9B6C97C324922BBA0088EE6F /* SceneDelegate.swift in Sources */,
 				9B6C97FE249252FC0088EE6F /* ArticleDetailCell.swift in Sources */,
 				9B6C97CB24922BBA0088EE6F /* JetManan.xcdatamodeld in Sources */,
+				9B6C9816249340260088EE6F /* URLData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

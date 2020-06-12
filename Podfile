@@ -6,6 +6,7 @@ target 'JetManan' do
   use_frameworks!
 
   # Pods for JetManan
+  pod 'Alamofire'
 
   target 'JetMananTests' do
     inherit! :search_paths
