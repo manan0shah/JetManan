@@ -54,11 +54,20 @@ class ArticleVC: UIViewController {
         self.edgesForExtendedLayout = UIRectEdge.bottom
         ArticleDetailCell.registerCell(for: tableViewArticle)
         tableViewArticle.addSubview(refreshControl)
-        viewModel.getArticleResponse(page: currentPage) { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableViewArticle.reloadData()
-                self?.viewModel.pageData()
-                
+        if Reachability.shared.isReachable {
+            viewModel.getArticleResponse(page: currentPage) { [weak self] in
+                DispatchQueue.main.async {
+                    self?.tableViewArticle.reloadData()
+                    self?.viewModel.pageData()
+                }
+            }
+        } else {
+            
+            if let articleDetailsCD =  CoreDataManager.sharedManager.fetchAllArticles() {
+                viewModel.getArticleResponse(articleDetailCD: articleDetailsCD) { [weak self] in
+                    self?.tableViewArticle.reloadData()
+                    self?.viewModel.pageData()
+                }
             }
         }
     }
@@ -80,7 +89,7 @@ class ArticleVC: UIViewController {
         viewModel.getArticleResponse (page: currentPage) { [weak self] in
             DispatchQueue.main.async {
                 self?.tableViewArticle.reloadData()
-                refreshControl.endRefreshing()
+//                refreshControl.endRefreshing()
             }
         }
     }
@@ -90,7 +99,7 @@ extension ArticleVC: UITableViewDelegate,UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-        
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.Count
     }
@@ -104,6 +113,19 @@ extension ArticleVC: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300//UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastRow = self.viewModel.Count - 1
+        if indexPath.row == lastRow && !self.isLastPageReached {
+            currentPage = currentPage + 1
+            viewModel.getArticleResponse (page: currentPage) { [weak self] in
+                DispatchQueue.main.async {
+                    self?.tableViewArticle.reloadData()
+                    self?.isLastPageReached = self?.viewModel.lastpagedReached ?? false
+                }
+            }
+        }
     }
 }
 

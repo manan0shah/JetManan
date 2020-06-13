@@ -31,5 +31,4 @@ struct NetworkManager {
         }
         urlSession.resume()
     }
-    
 }

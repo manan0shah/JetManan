@@ -74,35 +74,42 @@ class ArticleDetailCell: UITableViewCell {
             
         self.labelTime.text = getDateFromString(strDate: articleDetail.createdAt).timeAgoSinceDate()
         
-        let user = articleDetail.user[0]
-        let media = articleDetail.media[0]
+        if let user = articleDetail.user.count > 0 ?  articleDetail.user[0] : nil {
+            self.labelUsername.text = user.name
+            self.labelDesignation.text = user.designation
+            
+            if let strUrlUserLogo = user.avatar?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+                let imgUrl = URL(string: strUrlUserLogo) {
+                if strUrlUserLogo == "N/A"{
+                    self.imageArticleLogo.image = UIImage(named: "placeholderImage")
+                }
+                else{
+                    self.imageArticleLogo.loadImageWithUrl(imgUrl)
+                }
+            }
+        }
+       
+        if let media = (articleDetail.media?.count ?? 0) > 0 ?  articleDetail.media?[0] : nil {
+            self.labelArticleTitle.text = media.title
+            self.labelURL.text = media.url
+            if let strUrlArticle = media.image?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
+                let imgUrl = URL(string: strUrlArticle) {
+                if strUrlArticle == "N/A"{
+                    self.imageArticleImage.image = UIImage(named: "placeholderImage")
+                }
+                else{
+                    self.imageArticleImage.loadImageWithUrl(imgUrl)
+                }
+            }
+        }
         
-        self.labelUsername.text = user.name
-        self.labelDesignation.text = user.designation
+       
         
-        self.labelArticleTitle.text = media.title
-        self.labelURL.text = media.url
         self.labelArticleContent.text = articleDetail.content
 
-        if let strUrlArticle = media.image?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
-            let imgUrl = URL(string: strUrlArticle) {
-            if strUrlArticle == "N/A"{
-                self.imageArticleImage.image = UIImage(named: "placeholderImage")
-            }
-            else{
-                self.imageArticleImage.loadImageWithUrl(imgUrl)
-            }
-        }
         
-        if let strUrlUserLogo = user.avatar?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
-            let imgUrl = URL(string: strUrlUserLogo) {
-            if strUrlUserLogo == "N/A"{
-                self.imageArticleLogo.image = UIImage(named: "placeholderImage")
-            }
-            else{
-                self.imageArticleLogo.loadImageWithUrl(imgUrl)
-            }
-        }
+        
+        
     }
     
     func getDateFromString(strDate: String) -> Date {

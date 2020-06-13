@@ -33,7 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="L2s-59-oVr"/>
+                    <navigationItem key="navigationItem" title="Articles" id="L2s-59-oVr"/>
                     <connections>
                         <outlet property="tableViewArticle" destination="0ho-Pt-JYK" id="seQ-ij-VaB"/>
                     </connections>
