@@ -28,6 +28,7 @@
 		9B6C981A2493429C0088EE6F /* ArticleVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C98192493429C0088EE6F /* ArticleVIewModel.swift */; };
 		9B6C981D2494016E0088EE6F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C981C2494016E0088EE6F /* CoreDataManager.swift */; };
 		9B6C981F24947B820088EE6F /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C981E24947B820088EE6F /* Rechability.swift */; };
+		9BA305072496227A00396B35 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA305062496227A00396B35 /* Extensions.swift */; };
 		BBBF5B394CA68A6A82300AC0 /* Pods_JetManan_JetMananUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273C6303490EA356BAA3D640 /* Pods_JetManan_JetMananUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		9B6C98192493429C0088EE6F /* ArticleVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVIewModel.swift; sourceTree = "<group>"; };
 		9B6C981C2494016E0088EE6F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		9B6C981E24947B820088EE6F /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		9BA305062496227A00396B35 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B08785F57F78D45808E8AE79 /* Pods-JetManan-JetMananUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetManan-JetMananUITests.release.xcconfig"; path = "Target Support Files/Pods-JetManan-JetMananUITests/Pods-JetManan-JetMananUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA58E7B7D8B8AF4CC6514933 /* Pods-JetMananTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.debug.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4DE17063583D044B8968704 /* Pods-JetMananTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetMananTests.release.xcconfig"; path = "Target Support Files/Pods-JetMananTests/Pods-JetMananTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		9B6C97BF24922BBA0088EE6F /* JetManan */ = {
 			isa = PBXGroup;
 			children = (
+				9BA305052496226700396B35 /* Miscellaneous */,
 				9B6C981B249401530088EE6F /* Data */,
 				9B6C980324928D100088EE6F /* Network */,
 				9B6C980024925C4D0088EE6F /* ViewControllers */,
@@ -175,7 +178,7 @@
 		9B6C97F32492511C0088EE6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9B6C980C24928F820088EE6F /* Data Model */,
+				9B6C980D2493350A0088EE6F /* ArticleDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,14 +220,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		9B6C980C24928F820088EE6F /* Data Model */ = {
-			isa = PBXGroup;
-			children = (
-				9B6C980D2493350A0088EE6F /* ArticleDetailModel.swift */,
-			);
-			path = "Data Model";
-			sourceTree = "<group>";
-		};
 		9B6C981B249401530088EE6F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +227,14 @@
 				9B6C981C2494016E0088EE6F /* CoreDataManager.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		9BA305052496226700396B35 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				9BA305062496227A00396B35 /* Extensions.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		F0BA51F6A422AFCB71E1767F /* Pods */ = {
@@ -506,6 +509,7 @@
 				9B6C9818249340380088EE6F /* ImageLoader.swift in Sources */,
 				9B6C981D2494016E0088EE6F /* CoreDataManager.swift in Sources */,
 				9B6C981224933FFC0088EE6F /* NetworkManager.swift in Sources */,
+				9BA305072496227A00396B35 /* Extensions.swift in Sources */,
 				9B6C97C324922BBA0088EE6F /* SceneDelegate.swift in Sources */,
 				9B6C97FE249252FC0088EE6F /* ArticleDetailCell.swift in Sources */,
 				9B6C97CB24922BBA0088EE6F /* JetManan.xcdatamodeld in Sources */,

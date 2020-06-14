@@ -2,7 +2,7 @@
 //  JetMananTests.swift
 //  JetMananTests
 //
-//  Created by techjini on 11/06/20.
+//  Created by Sameer on 11/06/20.
 //  Copyright © 2020 ms. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  Rechability.swift
 //  JetManan
 //
-//  Created by techjini on 13/06/20.
+//  Created by Sameer on 13/06/20.
 //  Copyright © 2020 ms. All rights reserved.
 //
 

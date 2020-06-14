@@ -2,7 +2,7 @@
 //  APIData.swift
 //  JetManan
 //
-//  Created by techjini on 12/06/20.
+//  Created by Sameer on 12/06/20.
 //  Copyright © 2020 ms. All rights reserved.
 //
 import Foundation

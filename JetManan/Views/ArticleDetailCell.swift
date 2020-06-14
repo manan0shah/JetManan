@@ -2,7 +2,7 @@
 //  ArticleDetailCell.swift
 //  JetManan
 //
-//  Created by techjini on 11/06/20.
+//  Created by Sameer on 11/06/20.
 //  Copyright © 2020 ms. All rights reserved.
 //
 
@@ -25,7 +25,6 @@ class ArticleDetailCell: UITableViewCell {
     @IBOutlet weak var labelLikes: UILabel!
     @IBOutlet weak var labelComments: UILabel!
     weak var delegate:ArticleDetailCellDelegate?
-
     
     @IBOutlet weak var imageArticleImageTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageArticleImageHeightConstraint: NSLayoutConstraint!
@@ -36,7 +35,7 @@ class ArticleDetailCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
-        // Initialization code
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(urlTapped(tapGest:)))
         self.labelURL.isUserInteractionEnabled = true
         self.labelURL.addGestureRecognizer(tapGesture)
@@ -60,7 +59,6 @@ class ArticleDetailCell: UITableViewCell {
     //MARK:- show data on views
     func cellData(at indexPath: IndexPath, with articleDetail: ArticleDetailModel){
         
-       
         if articleDetail.likes > 1000 {
             self.labelLikes.text = String(format: "%.1f Likes", Double(articleDetail.likes)/1000)
         } else {
@@ -73,7 +71,7 @@ class ArticleDetailCell: UITableViewCell {
             self.labelComments.text = "\(articleDetail.comments) Comments"
         }
             
-        self.labelTime.text = getDateFromString(strDate: articleDetail.createdAt).timeAgoSinceDate()
+        self.labelTime.text = articleDetail.createdAt.getDate().timeAgoSinceDate()
         
         if let user =
             (articleDetail.user?.count ?? 0) > 0 ? articleDetail.user?[0] : nil {
@@ -116,58 +114,5 @@ class ArticleDetailCell: UITableViewCell {
         
         self.labelArticleContent.text = articleDetail.content
     }
-    
-    func getDateFromString(strDate: String) -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        return dateFormatter.date(from: strDate)!
-//        let timeInterval = Date().timeIntervalSince(date)
-//        return  "\(Int(timeInterval/60.0)) min"
-    }
 }
 
-extension Date {
-
-    func timeAgoSinceDate() -> String {
-
-        // From Time
-        let fromDate = self
-
-        // To Time
-        let toDate = Date()
-
-        // Estimation
-        // Year
-        if let interval = Calendar.current.dateComponents([.year], from: fromDate, to: toDate).year, interval > 0  {
-
-            return interval == 1 ? "\(interval)" + " " + "year ago" : "\(interval)" + " " + "years ago"
-        }
-
-        // Month
-        if let interval = Calendar.current.dateComponents([.month], from: fromDate, to: toDate).month, interval > 0  {
-
-            return interval == 1 ? "\(interval)" + " " + "month ago" : "\(interval)" + " " + "months ago"
-        }
-
-        // Day
-        if let interval = Calendar.current.dateComponents([.day], from: fromDate, to: toDate).day, interval > 0  {
-
-            return interval == 1 ? "\(interval)" + " " + "day ago" : "\(interval)" + " " + "days ago"
-        }
-
-        // Hours
-        if let interval = Calendar.current.dateComponents([.hour], from: fromDate, to: toDate).hour, interval > 0 {
-
-            return interval == 1 ? "\(interval)" + " " + "hour ago" : "\(interval)" + " " + "hours ago"
-        }
-
-        // Minute
-        if let interval = Calendar.current.dateComponents([.minute], from: fromDate, to: toDate).minute, interval > 0 {
-
-            return interval == 1 ? "\(interval)" + " " + "minute ago" : "\(interval)" + " " + "minutes ago"
-        }
-
-        return "a moment ago"
-    }
-}

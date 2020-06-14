@@ -2,7 +2,7 @@
 //  ArticleVC.swift
 //  JetManan
 //
-//  Created by techjini on 11/06/20.
+//  Created by Sameer on 11/06/20.
 //  Copyright © 2020 ms. All rights reserved.
 //
 
@@ -21,7 +21,6 @@ class ArticleVC: UIViewController {
     var isLoadMore: Bool = true
     var isNextPageCallInprogress: Bool = false
     
-    //MARK:- Variable Declairations
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:
@@ -54,11 +53,11 @@ class ArticleVC: UIViewController {
         self.edgesForExtendedLayout = UIRectEdge.bottom
         ArticleDetailCell.registerCell(for: tableViewArticle)
         tableViewArticle.addSubview(refreshControl)
+       
         if Reachability.shared.isReachable {
             viewModel.getArticleResponse(page: currentPage) { [weak self] in
                 DispatchQueue.main.async {
                     self?.tableViewArticle.reloadData()
-                    self?.viewModel.pageData()
                 }
             }
         } else {
@@ -66,18 +65,7 @@ class ArticleVC: UIViewController {
             if let articleDetailsCD =  CoreDataManager.sharedManager.fetchAllArticles() {
                 viewModel.getArticleResponse(articleDetailCD: articleDetailsCD) { [weak self] in
                     self?.tableViewArticle.reloadData()
-                    self?.viewModel.pageData()
                 }
-            }
-        }
-    }
-    
-    //MARK:- Add pagination call
-    func loadMore(){
-        currentPage = currentPage+1
-        viewModel.getArticleResponse(page: currentPage) { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableViewArticle.reloadData()
             }
         }
     }
@@ -85,16 +73,18 @@ class ArticleVC: UIViewController {
     // Pull to refresh action
     @objc private func refreshList(_ refreshControl: UIRefreshControl) {
         tableViewArticle.reloadData()
-        currentPage = 1
-        viewModel.getArticleResponse (page: currentPage) { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableViewArticle.reloadData()
-//                refreshControl.endRefreshing()
+        currentPage = currentPage + 1
+        if !self.isLastPageReached {
+            viewModel.getArticleResponse (page: currentPage) { [weak self] in
+                DispatchQueue.main.async {
+                    self?.tableViewArticle.reloadData()
+                }
             }
         }
     }
 }
 
+//Mark:- Tableview methods
 extension ArticleVC: UITableViewDelegate,UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -129,6 +119,7 @@ extension ArticleVC: UITableViewDelegate,UITableViewDataSource {
     }
 }
 
+//Mark:- Navigate to web browser on link tapped
 extension ArticleVC : ArticleDetailCellDelegate {
     func urlTapped(urlString: String) {
         if let urlUsed = URL(string: urlString) {

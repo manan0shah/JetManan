@@ -2,7 +2,7 @@
 //  CoreDataManager.swift
 //  JetManan
 //
-//  Created by techjini on 13/06/20.
+//  Created by Sameer on 13/06/20.
 //  Copyright © 2020 ms. All rights reserved.
 //
 
@@ -41,6 +41,7 @@ class CoreDataManager {
       }
     }
     
+    //MARK:- Insert article into core data
     func insertArticle(article: ArticleDetailModel) {
         
         let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
@@ -62,20 +63,6 @@ class CoreDataManager {
         let encodedUser = try? NSKeyedArchiver.archivedData(withRootObject: article.user, requiringSecureCoding: false)
         articleObj.setValue(encodedUser, forKey: "user")
         
-//        do {
-//            let mediaData = try NSKeyedArchiver.archivedData(withRootObject: article.media, requiringSecureCoding: true)
-//            articleObj.setValue(mediaData, forKey: "media")
-//        } catch let error {
-//            print(error.localizedDescription)
-//        }
-        
-//        do {
-//            let userData = try NSKeyedArchiver.archivedData(withRootObject: article.user, requiringSecureCoding: false)
-//            articleObj.setValue(userData, forKey: "user")
-//        } catch let error {
-//            print(error.localizedDescription)
-//        }
-        
         do {
             try managedContext.save()
         } catch let error as NSError {
@@ -84,18 +71,17 @@ class CoreDataManager {
         }
     }
 
+    //Mark:- Fetch articles from core data
     func fetchAllArticles() -> [ArticleDetail]?{
-      
-      let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-      
-      let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ArticleDetail")
-      
-      do {
-        let articles = try managedContext.fetch(fetchRequest)
-        return articles as? [ArticleDetail]
-      } catch let error as NSError {
-        print("Could not fetch. \(error), \(error.userInfo)")
-        return nil
-      }
+        
+        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ArticleDetail")
+        do {
+            let articles = try managedContext.fetch(fetchRequest)
+            return articles as? [ArticleDetail]
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            return nil
+        }
     }
 }
