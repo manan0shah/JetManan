@@ -55,11 +55,15 @@ class CoreDataManager {
         articleObj.setValue(article.createdAt, forKey: "createdAt")
         articleObj.setValue(article.likes, forKeyPath: "likes")
         articleObj.setValue(article.comments, forKey: "comments")
-        articleObj.setValue(article.media?.map{ $0.encode() }, forKey: "media")
-        articleObj.setValue(article.user.map{ $0.encode() }, forKey: "user")
+      
+        let encodedMedia = try? NSKeyedArchiver.archivedData(withRootObject: article.media, requiringSecureCoding: false)
+        articleObj.setValue(encodedMedia, forKey: "media")
+        
+        let encodedUser = try? NSKeyedArchiver.archivedData(withRootObject: article.user, requiringSecureCoding: false)
+        articleObj.setValue(encodedUser, forKey: "user")
         
 //        do {
-//            let mediaData = try NSKeyedArchiver.archivedData(withRootObject: article.media.enc, requiringSecureCoding: true)
+//            let mediaData = try NSKeyedArchiver.archivedData(withRootObject: article.media, requiringSecureCoding: true)
 //            articleObj.setValue(mediaData, forKey: "media")
 //        } catch let error {
 //            print(error.localizedDescription)

@@ -48,18 +48,16 @@ class  ArticleViewModel {
     func getArticleResponse(articleDetailCD : [ArticleDetail], completion: (()-> Void)?) {
         var arrArticleDetailModel : [ArticleDetailModel] = []
         for articleCD in articleDetailCD {
-            var media : [ArticleMediaModel] = []
-            if let mediaData = articleCD.media as? Data {
-                media = mediaData.compactMap{ _ in return ArticleMediaModel(data: mediaData) }
+            var media : Any? = nil
+            var user : Any? = nil
+            if let aMedia = articleCD.media {
+                media  = NSKeyedUnarchiver.unarchiveObject(with: aMedia as! Data)
             }
-            
-            var user : [ArticleUserModel] = []
-            if let userData = articleCD.user as? Data {
-                user = userData.compactMap{ _ in return ArticleUserModel(data: userData) }
+            if let aUser = articleCD.user {
+                user = NSKeyedUnarchiver.unarchiveObject(with: aUser as! Data)
             }
-            
-            // let user = NSKeyedUnarchiver.unarchiveObject(with: articleCD.user as! Data)
-            let articleDetailModel =  ArticleDetailModel(id: articleCD.id!, createdAt: articleCD.createdAt!, content: articleCD.content!, comments: Int(articleCD.comments), likes: Int(articleCD.likes), media: media, user: user)
+
+            let articleDetailModel =  ArticleDetailModel(id: articleCD.id!, createdAt: articleCD.createdAt!, content: articleCD.content!, comments: Int(articleCD.comments), likes: Int(articleCD.likes), media: media as? [ArticleMediaModel], user: user as? [ArticleUserModel])
             arrArticleDetailModel.append(articleDetailModel)
         }
         self.repoDataItem = arrArticleDetailModel

@@ -27,6 +27,7 @@ class ArticleDetailCell: UITableViewCell {
     weak var delegate:ArticleDetailCellDelegate?
 
     
+    @IBOutlet weak var imageArticleImageTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageArticleImageHeightConstraint: NSLayoutConstraint!
     //MARK:- Variable Declairations
     static let nib = UINib.init(nibName: "ArticleDetailCell", bundle: nil)
@@ -74,7 +75,8 @@ class ArticleDetailCell: UITableViewCell {
             
         self.labelTime.text = getDateFromString(strDate: articleDetail.createdAt).timeAgoSinceDate()
         
-        if let user = articleDetail.user.count > 0 ?  articleDetail.user[0] : nil {
+        if let user =
+            (articleDetail.user?.count ?? 0) > 0 ? articleDetail.user?[0] : nil {
             self.labelUsername.text = user.name
             self.labelDesignation.text = user.designation
             
@@ -95,21 +97,24 @@ class ArticleDetailCell: UITableViewCell {
             if let strUrlArticle = media.image?.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed),
                 let imgUrl = URL(string: strUrlArticle) {
                 if strUrlArticle == "N/A"{
-                    self.imageArticleImage.image = UIImage(named: "placeholderImage")
+                    self.imageArticleImageHeightConstraint.constant = 0
+                    self.imageArticleImageTopConstraint.constant = 0
                 }
                 else{
                     self.imageArticleImage.loadImageWithUrl(imgUrl)
+                    self.imageArticleImageHeightConstraint.constant = 70
+                    self.imageArticleImageTopConstraint.constant = 10
                 }
+            } else {
+                self.imageArticleImageHeightConstraint.constant = 0
+                self.imageArticleImageTopConstraint.constant = 0
             }
+        } else {
+            self.imageArticleImageHeightConstraint.constant = 0
+            self.imageArticleImageTopConstraint.constant = 0
         }
         
-       
-        
         self.labelArticleContent.text = articleDetail.content
-
-        
-        
-        
     }
     
     func getDateFromString(strDate: String) -> Date {
@@ -119,7 +124,6 @@ class ArticleDetailCell: UITableViewCell {
         return dateFormatter.date(from: strDate)!
 //        let timeInterval = Date().timeIntervalSince(date)
 //        return  "\(Int(timeInterval/60.0)) min"
-        
     }
 }
 
